@@ -8,3 +8,11 @@ const checkDataUser = () => {
 };
 
 checkDataUser();
+
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.querySelector("ul.mobile");
+
+// تفعيل أو تعطيل عرض القائمة المنسدلة عند الضغط على الزر
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});

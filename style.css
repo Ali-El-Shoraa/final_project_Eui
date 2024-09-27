@@ -121,8 +121,34 @@ header#header-navbar {
       justify-content: center;
       gap: 18px;
       font-size: 22px;
+      /*  */
+
+      .menu-toggle {
+        color: #333;
+        display: none;
+        background: none;
+        border: none;
+        margin: 10px 0;
+        list-style-type: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+          display: block;
+          flex-direction: column;
+          /* position: absolute; */
+          /* top: 100%; */
+          /* left: 0; */
+          /* width: 100%; */
+          /* background-color: #fff; */
+          /* padding: 10px; */
+        }
+      }
 
       li {
+        @media (max-width: 768px) {
+          display: none;
+        }
         a {
           color: white;
         }
@@ -130,6 +156,12 @@ header#header-navbar {
     }
   }
 }
+
+#menu-list {
+  display: flex;
+  list-style-type: none;
+}
+
 /* end header-navbar */
 
 main {
@@ -252,6 +284,10 @@ section#image-info {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        a {
+          color: white;
+        }
 
         p {
           color: #ddd;
